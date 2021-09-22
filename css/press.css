@@ -1,0 +1,133 @@
+.news {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.news:first-child::before,
+.news:first-child::after {
+    display: none;
+}
+
+.news:before {
+    content: '';
+    width: 1px;
+    height: 420px;
+    position: absolute;
+    background-color: #dfdcd8;
+    left: -115px;
+    bottom: 24px;
+    display: none;
+}
+
+.news:after {
+    content: '';
+    position: absolute;
+    background: #f8f5f1;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #dfdcd8;
+    top: -167px;
+    left: -120px;
+    display: none;
+}
+
+.news .year {
+    transform: rotate(-90deg);
+    position: absolute;
+    font-family: 'theano_didotregular';
+    font-size: 24px;
+    left: -140px;
+    top: -220px;
+    display: none;
+}
+
+.news:last-child .year {
+    right: -140px;
+    left: unset;
+}
+
+.news:last-child::before {
+    right: -115px;
+    left: unset;
+}
+
+.news:last-child::after {
+    right: -120px;
+    left: unset;
+}
+
+.news-list {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'apex-newbook';
+    font-size: 20px;
+    height: 70px;
+    align-items: center;
+    border-top: 1px solid #bea083;
+    position: relative;
+}
+
+.news-list:first-child {
+    border: none;
+}
+
+.news-list:hover {
+    background-color: #e5d8ca;
+    border: none;
+}
+
+.news-list:hover:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 35px 23px 35px 0;
+    border-color: transparent #f8f5f1 transparent transparent;
+    position: absolute;
+    right: 0;
+}
+
+.news-list:hover:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 35px 0 35px 23px;
+    border-color: transparent transparent transparent #f8f5f1;
+    position: absolute;
+    left: 0;
+}
+
+.news-list:hover .news-link {
+    width: 90%;
+}
+
+.news-link {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+    color: #595858;
+    height: 70px;
+    align-items: center;
+}
+
+@media screen and (min-width:576px) {
+    .news {
+        width: 65%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .news {
+        margin-bottom: 150px;
+    }
+    .news:before,
+    .news:after,
+    .news .year {
+        display: block;
+    }
+}

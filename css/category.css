@@ -1,0 +1,170 @@
+.content.category-with-price,
+.content.category {
+    padding-bottom: 60px;
+}
+
+.category__items {
+    display: flex;
+    flex-direction: column;
+}
+
+.category__item {
+    height: auto;
+    text-align: center;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.category__item-img {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.category__item-title {
+    font-family: 'apex_newbook';
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.category__item-link {
+    color: #7c7b79;
+    border: 1px solid #7c7b79;
+    padding: 10px 20px;
+    font-size: 11px;
+    display: inline-block;
+}
+
+
+/* WITH PRICE */
+
+.category__menu {
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.category__menu ul {
+    display: inline-flex;
+    border-bottom: 1px solid #989794;
+}
+
+.category__menu-title {
+    font-family: 'apex_newlight';
+    font-size: 20px;
+    font-weight: 100;
+    margin-right: 50px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.category__menu-title:last-child {
+    margin-right: 0;
+}
+
+.category__menu-link {
+    color: #989794;
+}
+
+.category__menu-link.active {
+    color: black;
+    font-weight: bold;
+}
+
+.category__menu-link.active:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #976430;
+    bottom: -16px;
+    left: 0;
+}
+
+.category__items.classic .category__item.modern,
+.category__items.modern .category__item.classic {
+    display: none;
+}
+
+.category-with-price .category__item-img,
+.category-with-price .category__item-title {
+    margin-bottom: 13px;
+}
+
+.category-with-price .category__item-img img {
+    box-shadow: 10px 13px 20px 0 rgba(178, 164, 144, 30%);
+}
+
+.category__item-subtitle {
+    color: #9a9590;
+    font-family: 'apex_newbook';
+    font-size: 11px;
+}
+
+.category__item-info {
+    display: flex;
+    color: #976430;
+    font-family: 'theano_didotregular';
+    font-weight: 300;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.category__item-info .price {
+    font-size: 54px;
+    margin-right: 35px;
+    position: relative;
+    padding-left: 16px;
+}
+
+.category__item-info .price:before {
+    content: "\20BA";
+    position: absolute;
+    font-size: 32px;
+    bottom: 9px;
+    left: -8px;
+    font-family: 'Arial';
+}
+
+.category__item-info .price:after {
+    content: '.00';
+    position: absolute;
+    font-size: 24px;
+    top: 8px;
+}
+
+.category__item-info .unit {
+    color: #9a9590;
+    font-size: 22px;
+    height: 15px;
+}
+
+@media screen and (min-width:768px) {
+    .category__items {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .category__item {
+        width: 50%;
+    }
+    .other-page__items {
+        flex-direction: row;
+    }
+    .other-page__links {
+        margin-right: 30px
+    }
+    .other-page__links:last-child {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .category__item {
+        width: 25%;
+    }
+}

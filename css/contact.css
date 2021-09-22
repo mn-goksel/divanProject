@@ -1,0 +1,147 @@
+.content-contact {
+    position: relative;
+    margin-bottom: 150px;
+}
+
+.contact-map {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.contact-hq {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    background: #f8f5f1;
+    letter-spacing: 0.8px;
+    margin-bottom: 50px;
+    margin: 50px auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-title {
+    font-family: 'theano_didotregular';
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 65px;
+    position: relative;
+}
+
+.contact-title:after {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 1px;
+    background-color: #976430;
+    left: 46%;
+    bottom: -30px;
+}
+
+.contact-info span {
+    font-family: 'apex_newbook';
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.contact-adress {
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 365px;
+    height: 500px;
+    right: 200px;
+}
+
+.content .contact-form input {
+    margin-bottom: 15px;
+    height: 45px;
+    color: black;
+}
+
+.contact-form textarea {
+    width: 100%;
+    text-align: center;
+    background-color: #f8f5f1;
+    resize: none;
+    border: 2px solid #dcd6d0;
+    color: black;
+    font-size: 20px;
+    font-family: 'apex_newbook';
+    margin-bottom: 30px;
+}
+
+.content .contact-form .submit {
+    background-color: #976430;
+    height: 50px;
+    color: white;
+}
+
+.contact-facility {
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+@media screen and (min-width:768px) {
+    .contact-map {
+        justify-content: flex-end;
+        width: 85%;
+    }
+    .contact-map.facility {
+        justify-content: center;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .contact-facility {
+        display: flex;
+        text-align: unset;
+    }
+    .contact-map {
+        margin-bottom: 150px;
+    }
+    .contact-hq {
+        flex-direction: row;
+        margin-bottom: 200px;
+    }
+    .contact-hq .contact-info {
+        position: absolute;
+        left: 67px;
+        top: 281px;
+        padding-top: 70px;
+    }
+    .contact-map.facility {
+        width: unset;
+    }
+    .contact-info {
+        margin: unset;
+        align-items: baseline;
+        text-align: start;
+        justify-content: unset;
+    }
+    .contact-facility .contact-title:after,
+    .contact-hq .contact-title:after {
+        left: 0;
+    }
+    .contact-form {
+        margin-left: 440px;
+    }
+    .contact-form .contact-title:after {
+        left: 46%;
+    }
+}
