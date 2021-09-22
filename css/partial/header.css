@@ -70,6 +70,11 @@
     flex: 1;
 }
 
+.submenu__content-img {
+    min-height: 530px;
+    width: 100%;
+}
+
 .submenu__content-list li {
     padding-left: 100px;
     margin-bottom: 45px;
